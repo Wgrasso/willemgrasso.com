@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPT7CW82WE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PPT7CW82WE');
+  </script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Willem Grasso</title>
+  <meta name="description" content="Learn more about Willem Grasso. Developer, designer, and neuroengineering student at TU Delft.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>W</text></svg>">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="nav-header" id="nav-header">
+    <div class="nav-brand">
+      <a href="index.html" class="nav-brand-text">Willem Grasso</a>
+    </div>
+    
+    <nav class="nav-links">
+      <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+      <a href="resume.html" class="nav-link">Resume</a>
+      <a href="about.html" class="nav-link active">About Me</a>
+    </nav>
+    
+    <!-- Mobile Toggle -->
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="nav-mobile">
+    <button class="nav-mobile-toggle" id="nav-close" aria-label="Close menu" style="position: absolute; top: 2rem; right: 2rem;">
+      <span style="transform: rotate(45deg) translateY(5px);"></span>
+      <span style="opacity: 0;"></span>
+      <span style="transform: rotate(-45deg) translateY(-5px);"></span>
+    </button>
+    
+    <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+    <a href="resume.html" class="nav-link">Resume</a>
+    <a href="about.html" class="nav-link">About Me</a>
+  </nav>
+  
+  <!-- About Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero-content">
+        <span class="text-micro about-label">Willem Grasso</span>
+        <h1 class="text-display about-title">About Me</h1>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Background Section -->
+  <section class="section about-story-section">
+    <div class="container">
+      <div class="about-story-grid">
+        <div class="about-story-sidebar">
+          <h2 class="text-micro section-label">Background</h2>
+        </div>
+        <div class="about-story-content">
+          <div class="about-content-with-photo">
+            <div class="about-text">
+              <p class="text-body">
+                I grew up with two different worlds around me: my mother is a doctor and my father is an entrepreneur. Being exposed to both shaped how I think about work and problem solving.
+              </p>
+              <p class="text-body">
+                A few years ago, I worked in a hospital in Namibia alongside my mother. That experience made me realize that while medicine fascinates me, I'm more drawn to the technology behind it than to one on one patient care. That insight led me to study Clinical Technology at TU Delft, a field that sits between engineering and medicine. Recently, some of my courses have sparked an interest in neurotechnology. I don't yet know exactly where that will lead, but I do know I want to build something of my own eventually.
+              </p>
+            </div>
+            <img src="pictures/WhatsApp Image 2025-12-24 at 11.42.36.jpeg" alt="Willem Grasso" class="about-photo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .about-content-with-photo {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .about-text {
+        flex: 1;
+      }
+      .about-photo {
+        width: 280px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+        margin-left: 3rem;
+        margin-right: -4rem;
+      }
+      @media (max-width: 1200px) {
+        .about-photo {
+          margin-right: -2rem;
+        }
+      }
+      @media (max-width: 900px) {
+        .about-content-with-photo {
+          flex-direction: row;
+        }
+        .about-photo {
+          width: 200px;
+          margin-left: 2rem;
+          margin-right: 0;
+        }
+      }
+      @media (max-width: 600px) {
+        .about-content-with-photo {
+          flex-direction: column;
+        }
+        .about-photo {
+          width: 70%;
+          max-width: 280px;
+          margin-top: 1.5rem;
+          margin-left: auto;
+          margin-right: 0;
+        }
+      }
+    </style>
+  </section>
+  
+  <!-- Growing Up Section -->
+  <section class="section about-story-section" style="background: var(--color-white);">
+    <div class="container">
+      <div class="about-story-grid">
+        <div class="about-story-sidebar">
+          <h2 class="text-micro section-label">Growing Up</h2>
+        </div>
+        <div class="about-story-content">
+          <p class="text-body">
+            I'm 22 years old. I grew up in Amsterdam, moved to Barcelona with my family at 15, and later returned to the Netherlands to finish high school in The Hague.
+          </p>
+          <p class="text-body">
+            After graduating, I took a gap year and traveled through Southern Africa and South America. I enjoy being in new places and different environments whenever I get the chance. I'm currently based in Delft.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Outside of Studies Section -->
+  <section class="section about-story-section">
+    <div class="container">
+      <div class="about-story-grid">
+        <div class="about-story-sidebar">
+          <h2 class="text-micro section-label">Outside of Studies</h2>
+        </div>
+        <div class="about-story-content">
+          <div class="outside-content-with-photo">
+            <div class="outside-text">
+              <p class="text-body">
+                Outside of university, I spend a lot of time kitesurfing. It's something my whole family does. I also run cross country, mostly as a way to clear my head.
+              </p>
+              <p class="text-body">
+                I enjoy experimenting with coding and building small projects involving motors, mainly out of curiosity and a desire to understand how things work. I joined a fraternity in my first year and now live with fifteen other students in Delft, which has been a fun and social part of student life.
+              </p>
+            </div>
+            <img src="pictures/kitesurf_foto .jpeg" alt="Kitesurfing" class="kitesurf-photo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .outside-content-with-photo {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .outside-text {
+      flex: 1;
+    }
+    .kitesurf-photo {
+      width: 420px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+      margin-left: 3rem;
+      margin-right: -14rem;
+    }
+    @media (max-width: 1200px) {
+      .kitesurf-photo {
+        margin-right: -6rem;
+      }
+    }
+    @media (max-width: 900px) {
+      .outside-content-with-photo {
+        flex-direction: row;
+      }
+      .kitesurf-photo {
+        width: 280px;
+        margin-left: 2rem;
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 600px) {
+      .outside-content-with-photo {
+        flex-direction: column;
+      }
+      .kitesurf-photo {
+        width: 80%;
+        max-width: 350px;
+        margin-top: 1.5rem;
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+  </style>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="index.html#portfolio" class="footer-link">Portfolio</a>
+        <a href="resume.html" class="footer-link">Resume</a>
+        <a href="about.html" class="footer-link">About Me</a>
+      </div>
+      <p class="footer-copyright">© 2025 Willem Grasso. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+

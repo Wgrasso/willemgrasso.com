@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Willem Grasso - Resume</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 10pt;
+      line-height: 1.4;
+      color: #1a1a1a;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      background: white;
+    }
+    
+    @media print {
+      body {
+        padding: 0;
+      }
+      @page {
+        size: letter;
+        margin: 0.5in;
+      }
+    }
+    
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 12pt;
+      border-bottom: 1pt solid #333;
+      padding-bottom: 10pt;
+    }
+    
+    .name {
+      font-size: 20pt;
+      font-weight: 700;
+      letter-spacing: 1pt;
+      margin-bottom: 4pt;
+    }
+    
+    .target-role {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 6pt;
+    }
+    
+    .availability {
+      font-size: 9pt;
+      color: #444;
+      margin-bottom: 6pt;
+    }
+    
+    .contact {
+      font-size: 9pt;
+      color: #333;
+    }
+    
+    .contact span {
+      margin: 0 6pt;
+    }
+    
+    /* Sections */
+    .section {
+      margin-bottom: 12pt;
+    }
+    
+    .section-title {
+      font-size: 11pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5pt;
+      border-bottom: 0.5pt solid #999;
+      padding-bottom: 2pt;
+      margin-bottom: 6pt;
+      color: #1a1a1a;
+    }
+    
+    /* Profile */
+    .profile-text {
+      text-align: justify;
+    }
+    
+    /* Education */
+    .edu-title {
+      font-weight: 600;
+    }
+    
+    .edu-org {
+      font-style: italic;
+      color: #444;
+    }
+    
+    .edu-desc {
+      margin-top: 2pt;
+    }
+    
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4pt 16pt;
+    }
+    
+    .skill-item {
+      margin-bottom: 2pt;
+    }
+    
+    .skill-label {
+      font-weight: 600;
+      display: inline;
+    }
+    
+    .skill-value {
+      display: inline;
+    }
+    
+    /* Experience & Projects */
+    .item {
+      margin-bottom: 8pt;
+    }
+    
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    
+    .item-title {
+      font-weight: 600;
+    }
+    
+    .item-org {
+      font-style: italic;
+      color: #444;
+      font-size: 9pt;
+    }
+    
+    ul {
+      margin-left: 14pt;
+      margin-top: 2pt;
+    }
+    
+    li {
+      margin-bottom: 1pt;
+    }
+    
+    /* Two column for smaller sections */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8pt;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="name">WILLEM GRASSO</div>
+    <div class="contact">
+      <span>Delft, Netherlands</span> ·
+      <span>wpggrasso@gmail.com</span> ·
+      <span>+31 6 36225008</span> ·
+      <span>willemgrasso.com</span>
+    </div>
+  </header>
+
+  <!-- Profile -->
+  <section class="section">
+    <h2 class="section-title">Profile</h2>
+    <p class="profile-text">
+      Clinical Technology bachelor student at TU Delft with a strong interest in medicine, neurotechnology, and software engineering. Experience with real time software systems, medical and biological data analysis, and integration of software with sensors and embedded hardware. Motivated to work on medical devices and brain computer interfaces that combine engineering with clinical application.
+    </p>
+  </section>
+
+  <!-- Education -->
+  <section class="section">
+    <h2 class="section-title">Education</h2>
+    <div class="item">
+      <div class="item-header">
+        <span class="edu-title">Bachelor of Science in Clinical Technology</span>
+        <span class="item-org">September 2022 - Present</span>
+      </div>
+      <div class="edu-org">TU Delft, Netherlands</div>
+      <div class="edu-desc">Focus: neurotechnology, neural signaling, bioinformatics, electronics, hardware and software integration, clinically grounded systems.</div>
+    </div>
+    <div class="item" style="margin-top: 6pt;">
+      <div class="item-header">
+        <span class="edu-title">High School Diploma</span>
+        <span class="item-org">American School of The Hague</span>
+      </div>
+      <div class="edu-desc">AP Classes: Mathematics AB, Physics 1, Physics 2, Biology, Chemistry</div>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section class="section">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-label">Programming:</span> <span class="skill-value">Python (primary), JavaScript (basic)</span></div>
+      <div class="skill-item"><span class="skill-label">Hardware:</span> <span class="skill-value">Arduino, Raspberry Pi, sensors, motor control</span></div>
+      <div class="skill-item"><span class="skill-label">Data/Signals:</span> <span class="skill-value">DNA sequencing, MRI imaging, noise filtering, 20K+ patient datasets</span></div>
+      <div class="skill-item"><span class="skill-label">Tools:</span> <span class="skill-value">Supabase, Git, CLI, FileZilla, Strato</span></div>
+      <div class="skill-item"><span class="skill-label">Systems:</span> <span class="skill-value">Realtime sync, backend architecture, live updates for multiple users</span></div>
+    </div>
+  </section>
+
+  <!-- Employment -->
+  <section class="section">
+    <h2 class="section-title">Employment</h2>
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Surgical Robotics Internship</span>
+        <span class="item-org">Amphia Hospital, Netherlands · Present</span>
+      </div>
+      <ul>
+        <li>Shadowed 18 surgical procedures, including 12 robotic assisted surgeries using the Da Vinci system.</li>
+        <li>Practiced on Da Vinci simulation systems to gain insight into how surgeons experience robotic assisted procedures.</li>
+        <li>Observed human machine interaction, safety requirements, and real time decision making in the operating room.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Project Experience -->
+  <section class="section">
+    <h2 class="section-title">Project Experience</h2>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Biological Signal and Medical Data Analysis</span>
+      </div>
+      <ul>
+        <li>Analyzed DNA sequencing data from over 20000 cancer patients using clustering methods to identify breast cancer subgroups based on BRCA gene expression, and developed rule based MRI tumor detection pipelines with robust preprocessing for noisy medical data.</li>
+      </ul>
+    </div>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Wearable Balance Tracking Sensor</span>
+      </div>
+      <ul>
+        <li>Built a sensor based balance measurement system using Raspberry Pi to collect and process motion data, quantifying upper body stability and movement patterns in older patients.</li>
+      </ul>
+    </div>
+    
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Happie Dinner Planning App</span>
+      </div>
+      <ul>
+        <li>Built and deployed a real time group based dinner planning application with synchronized multi device state, handling concurrency, low latency updates, and early scaling, tested in over a dozen student houses.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Humanitarian Engineering -->
+  <section class="section">
+    <h2 class="section-title">Humanitarian Engineering</h2>
+    <div class="item">
+      <div class="item-title">Community Clean Up Initiative</div>
+      <div class="item-org">Epukiro, Namibia</div>
+      <ul>
+        <li>Implemented a community cleanup initiative that links waste collection to food support for local residents and has remained active for over three years.</li>
+      </ul>
+    </div>
+    
+    <div class="item">
+      <div class="item-title">The Farm Orphanage</div>
+      <div class="item-org">Gordons Bay, South Africa</div>
+      <ul>
+        <li>Led technical coordination and website development to support daily operations.</li>
+        <li>Helped design and implement new revenue generating initiatives to improve long term financial sustainability of the farm.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Volunteer -->
+  <section class="section">
+    <h2 class="section-title">Volunteer Experience</h2>
+    <div class="item">
+      <div class="item-title">Wildlife conservation work in central Namibia</div>
+      <p style="margin-top: 2pt;">Worked with animals unable to return to the wild due to prolonged exposure to humans.</p>
+    </div>
+    <div class="item" style="margin-top: 6pt;">
+      <div class="item-title">Medical outreach support in eastern Namibia</div>
+      <p style="margin-top: 2pt;">Volunteered in a hospital in Epukukiro supporting the underserved San community for over two and a half months.</p>
+    </div>
+  </section>
+</body>
+</html>

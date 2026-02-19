@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPT7CW82WE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PPT7CW82WE');
+  </script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happie | Willem Grasso</title>
+  <meta name="description" content="Happie. A fullstack application for meal and event planning for students and families.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>W</text></svg>">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="nav-header" id="nav-header">
+    <div class="nav-brand">
+      <a href="../index.html" class="nav-brand-text">Willem Grasso</a>
+    </div>
+    
+    <nav class="nav-links">
+      <a href="../index.html#portfolio" class="nav-link active">Portfolio</a>
+      <a href="../resume.html" class="nav-link">Resume</a>
+      <a href="../about.html" class="nav-link">About Me</a>
+    </nav>
+    
+    <!-- Mobile Toggle -->
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="nav-mobile">
+    <button class="nav-mobile-toggle" id="nav-close" aria-label="Close menu" style="position: absolute; top: 2rem; right: 2rem;">
+      <span style="transform: rotate(45deg) translateY(5px);"></span>
+      <span style="opacity: 0;"></span>
+      <span style="transform: rotate(-45deg) translateY(-5px);"></span>
+    </button>
+    
+    <a href="../index.html#portfolio" class="nav-link">Portfolio</a>
+    <a href="../resume.html" class="nav-link">Resume</a>
+    <a href="../about.html" class="nav-link">About Me</a>
+  </nav>
+  
+  <!-- Project Hero -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#portfolio" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M13 8.5H3M3 8.5L7 4.5M3 8.5L7 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Portfolio
+      </a>
+      <span class="text-micro project-type project-type-app">Mobile App</span>
+      <h1 class="text-display project-title">Happie</h1>
+      <p class="text-subtitle project-location">Meal Planning & Coordination App</p>
+    </div>
+  </section>
+  
+  <!-- Project Overview -->
+  <section class="section project-overview">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">Overview</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body project-intro">
+            A mobile app I built to solve a daily problem in my student house. Happie helps groups coordinate meals by tracking who's eating, suggesting recipes through a swipe based voting system, and planning special dinners. Built from scratch with full backend infrastructure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Project Details -->
+  <section class="section project-details-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">The Problem</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body">
+            I live in a house with 16 guys in Delft. We cook together, but keeping track of who's eating dinner on any given night became a recurring issue. We'd buy too much or too little food, people wouldn't feel like eating what was made, and coordinating recipes that everyone liked was difficult.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            I wanted a simple way to fix this, so I built Happie.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Solution Section -->
+  <section class="section project-solution-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">The Solution</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body">
+            Happie lets users connect in groups and indicate whether they're eating with the group that day. For recipes, I implemented a system similar to Tinder: every day, users swipe through new recipes. The recipe with the most likes gets suggested to the group along with the full recipe instructions.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            The app also includes an events system for planning special dinners, so the group can coordinate bigger meals in advance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Screenshots Carousel -->
+  <section class="section project-screenshots-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">Screenshots</h2>
+        </div>
+        <div class="project-content">
+          <div class="phone-carousel">
+            <div class="phone-carousel-wrapper">
+              <div class="phone-carousel-track" id="carousel-track">
+                <div class="phone-slide">
+                  <img src="../pictures/c.jpg" alt="Happie App Screenshot">
+                </div>
+                <div class="phone-slide">
+                  <img src="../pictures/IMG_1189.PNG" alt="Happie App Screenshot">
+                </div>
+                <div class="phone-slide">
+                  <img src="../pictures/IMG_1183.PNG" alt="Happie App Screenshot">
+                </div>
+                <div class="phone-slide">
+                  <img src="../pictures/IMG_1184.PNG" alt="Happie App Screenshot">
+                </div>
+                <div class="phone-slide">
+                  <img src="../pictures/IMG_1188.PNG" alt="Happie App Screenshot">
+                </div>
+                <div class="phone-slide">
+                  <img src="../pictures/IMG_1187.PNG" alt="Happie App Screenshot">
+                </div>
+                <div class="phone-slide">
+                  <img src="../pictures/IMG_1186.PNG" alt="Happie App Screenshot">
+                </div>
+              </div>
+            </div>
+            <div class="phone-carousel-controls">
+              <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+                  <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="carousel-dots" id="carousel-dots"></div>
+              <button class="carousel-btn carousel-next" onclick="moveCarousel(1)">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+                  <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- App Store CTA -->
+  <section class="section project-cta-section">
+    <div class="container">
+      <div class="project-cta">
+        <h3 class="text-title">Coming Soon to App Store</h3>
+        <p class="text-body">Happie is currently in the final stages before release.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Next Project -->
+  <section class="section next-project-section">
+    <div class="container">
+      <a href="community-incentive-program.html" class="next-project-link">
+        <span class="text-micro">Next Project</span>
+        <span class="text-title">Community Incentive Program</span>
+        <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8.5H13M13 8.5L9 4.5M13 8.5L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../index.html#portfolio" class="footer-link">Portfolio</a>
+        <a href="../resume.html" class="footer-link">Resume</a>
+        <a href="../about.html" class="footer-link">About Me</a>
+        <a href="../websites.html" class="footer-link">Websites</a>
+      </div>
+      <p class="footer-copyright">© 2025 Willem Grasso. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+  
+  <!-- Carousel Script -->
+  <script>
+    let currentSlide = 0;
+    const track = document.getElementById('carousel-track');
+    const slides = document.querySelectorAll('.phone-slide');
+    const totalSlides = slides.length;
+    const maxSlide = totalSlides - 1; // Last valid slide index
+    const dotsContainer = document.getElementById('carousel-dots');
+    
+    // Get actual slide width from rendered element
+    function getSlideWidth() {
+      if (slides.length > 0) {
+        return slides[0].offsetWidth;
+      }
+      return window.innerWidth <= 768 ? 200 : 280;
+    }
+    
+    // Create dots
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => goToSlide(i);
+      dotsContainer.appendChild(dot);
+    }
+    
+    function updateCarousel() {
+      const slideWidth = getSlideWidth();
+      track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+      document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+      });
+    }
+    
+    function moveCarousel(direction) {
+      const newSlide = currentSlide + direction;
+      // Prevent scrolling past first or last slide
+      if (newSlide < 0 || newSlide > maxSlide) return;
+      currentSlide = newSlide;
+      updateCarousel();
+    }
+    
+    function goToSlide(index) {
+      if (index < 0 || index > maxSlide) return;
+      currentSlide = index;
+      updateCarousel();
+    }
+    
+    // Update carousel on resize
+    window.addEventListener('resize', updateCarousel);
+  </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPT7CW82WE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PPT7CW82WE');
+  </script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Willem Grasso | Developer & Designer</title>
+  <meta name="description" content="Willem Grasso. Building modern websites and digital experiences. View my portfolio of web development and app design projects.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>W</text></svg>">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="nav-header" id="nav-header">
+    <div class="nav-brand">
+      <a href="index.html" class="nav-brand-text">Willem Grasso</a>
+    </div>
+    
+    <nav class="nav-links">
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="resume.html" class="nav-link">Resume</a>
+      <a href="about.html" class="nav-link">About Me</a>
+    </nav>
+    
+    <!-- Mobile Toggle -->
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="nav-mobile">
+    <button class="nav-mobile-toggle" id="nav-close" aria-label="Close menu" style="position: absolute; top: 2rem; right: 2rem;">
+      <span style="transform: rotate(45deg) translateY(5px);"></span>
+      <span style="opacity: 0;"></span>
+      <span style="transform: rotate(-45deg) translateY(-5px);"></span>
+    </button>
+    
+    <a href="#portfolio" class="nav-link">Portfolio</a>
+    <a href="resume.html" class="nav-link">Resume</a>
+    <a href="about.html" class="nav-link">About Me</a>
+  </nav>
+  
+  <!-- Hero Section -->
+  <main class="hero" id="home">
+    <div class="hero-content hero-content-split">
+      <div class="hero-left">
+        <h1 class="text-display hero-title-small">Willem Grasso</h1>
+      </div>
+      <div class="hero-right">
+        <nav class="hero-nav">
+          <a href="#portfolio" class="hero-nav-link">Portfolio</a>
+          <a href="resume.html" class="hero-nav-link">Resume</a>
+          <a href="about.html" class="hero-nav-link">About Me</a>
+        </nav>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <span class="text-micro">Scroll</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <path d="M8 4V20M8 20L2 14M8 20L14 14" stroke="#aaa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </main>
+  
+  <!-- Pillars Section -->
+  <section class="section pillars-section">
+    <div class="container">
+      <div class="pillars-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); justify-content: center; max-width: 1000px; margin: 0 auto;">
+        <div class="pillar">
+          <span class="text-micro pillar-number">01</span>
+          <h3 class="text-title">Portfolio</h3>
+          <p class="text-body">A closer look at my independent projects and volunteer experiences, with images and the stories behind them.</p>
+        </div>
+        
+        <div class="pillar">
+          <span class="text-micro pillar-number">02</span>
+          <h3 class="text-title">Resume</h3>
+          <p class="text-body">My education, technical skills, work experience, and a summary of the projects I'm currently working on.</p>
+        </div>
+        
+        <div class="pillar">
+          <span class="text-micro pillar-number">03</span>
+          <h3 class="text-title">About Me</h3>
+          <p class="text-body">Who I am, where I come from, and what drives my interest in technology, engineering, and humanitarian work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section class="section projects-section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="text-title">Portfolio</h2>
+        <p class="text-body">A closer look at the projects mentioned in my resume, with more details, images, and the stories behind them.</p>
+      </div>
+      
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <a href="projects/community-incentive-program.html" class="project-card">
+          <div class="project-preview">
+            <img src="pictures/trash-bags-line.jpg" alt="Community Incentive Program Preview" class="project-preview-img">
+          </div>
+          <span class="text-micro project-type project-type-humanitarian">Humanitarian Project</span>
+          <h3>Community Incentive Program</h3>
+          <p>Scalable incentive system exchanging food for collected waste in Epukukiro, Namibia. Sustained removal of 50+ trash bags per collection day, supplying hundreds with food.</p>
+          <span class="project-link">
+            Learn More
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8.5H13M13 8.5L9 4.5M13 8.5L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+        
+        <!-- Project Card 2 -->
+        <a href="projects/the-farm-orphanage.html" class="project-card">
+          <div class="project-preview">
+            <img src="pictures/c86a746e-b7d0-4881-ac4e-d44b050138e1.jpg" alt="The Farm Orphanage">
+          </div>
+          <span class="text-micro project-type project-type-humanitarian">Humanitarian Project</span>
+          <h3>The Farm: Orphanage</h3>
+          <p>Family led project establishing an orphanage in Gordons Bay, South Africa. Supporting children transitioning off the streets with a farm based kitchen and community workshops.</p>
+          <span class="project-link">
+            Learn More
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8.5H13M13 8.5L9 4.5M13 8.5L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+        
+        <!-- Project Card 3 -->
+        <a href="projects/happie.html" class="project-card">
+          <div class="project-preview">
+            <img src="pictures/IMG_1196.PNG" alt="Happie App" class="preview-contain">
+          </div>
+          <span class="text-micro project-type project-type-app">Mobile App</span>
+          <h3>Happie</h3>
+          <p>Full stack application for meal and event planning for students and families. Designed and developed with complete backend infrastructure. Entering App Store release.</p>
+          <span class="project-link">
+            Try It Out
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8.5H13M13 8.5L9 4.5M13 8.5L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+        
+        </div>
+    </div>
+  </section>
+  
+  <!-- Volunteer Experience Section -->
+  <section class="section volunteering-section" id="volunteering">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="text-title">Volunteer Experience</h2>
+        <p class="text-body">More details about my volunteer work can be found in my <a href="resume.html" style="color: var(--color-gray-600); text-decoration: underline;">resume</a>.</p>
+      </div>
+      
+      <div class="volunteering-grid">
+        <div class="volunteering-card">
+          <span class="text-micro volunteering-location">Central Namibia</span>
+          <h3>Wildlife Conservation Program</h3>
+        </div>
+        
+        <div class="volunteering-card">
+          <span class="text-micro volunteering-location">Eastern Namibia</span>
+          <h3>Lifeline Medical Outreach</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="#portfolio" class="footer-link">Portfolio</a>
+        <a href="resume.html" class="footer-link">Resume</a>
+        <a href="about.html" class="footer-link">About Me</a>
+      </div>
+      <p class="footer-copyright">© 2025 Willem Grasso. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+
