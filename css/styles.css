@@ -823,6 +823,14 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-black);
 }
 
+/* In a project hero the back link is followed by the project-type tag. Both are
+   inline, so they collided on one line and the back link's margin never applied.
+   Making it block-level puts the tag on its own line and restores the spacing. */
+.project-hero .back-link {
+  display: flex;
+  width: fit-content;
+}
+
 .project-title {
   margin-bottom: var(--spacing-sm);
 }

@@ -9,20 +9,20 @@
     gtag('js', new Date());
     gtag('config', 'G-PPT7CW82WE');
   </script>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happie | Willem Grasso</title>
-  <meta name="description" content="Happie. A fullstack application for meal and event planning for students and families.">
-  
+  <title>Corvator | Willem Grasso</title>
+  <meta name="description" content="Corvator. An iOS app that turns skipped chores into a fair, visible penalty queue for student houses.">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Styles -->
   <link rel="stylesheet" href="../css/styles.css">
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>W</text></svg>">
 </head>
@@ -32,13 +32,13 @@
     <div class="nav-brand">
       <a href="../index.html" class="nav-brand-text">Willem Grasso</a>
     </div>
-    
+
     <nav class="nav-links">
       <a href="../index.html#portfolio" class="nav-link active">Portfolio</a>
       <a href="../resume.html" class="nav-link">Resume</a>
       <a href="../about.html" class="nav-link">About Me</a>
     </nav>
-    
+
     <!-- Mobile Toggle -->
     <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Open menu">
       <span></span>
@@ -46,7 +46,7 @@
       <span></span>
     </button>
   </header>
-  
+
   <!-- Mobile Navigation -->
   <nav class="nav-mobile" id="nav-mobile">
     <button class="nav-mobile-toggle" id="nav-close" aria-label="Close menu" style="position: absolute; top: 2rem; right: 2rem;">
@@ -54,12 +54,12 @@
       <span style="opacity: 0;"></span>
       <span style="transform: rotate(-45deg) translateY(-5px);"></span>
     </button>
-    
+
     <a href="../index.html#portfolio" class="nav-link">Portfolio</a>
     <a href="../resume.html" class="nav-link">Resume</a>
     <a href="../about.html" class="nav-link">About Me</a>
   </nav>
-  
+
   <!-- Project Hero -->
   <section class="project-hero">
     <div class="container">
@@ -70,11 +70,11 @@
         Back to Portfolio
       </a>
       <span class="text-micro project-type project-type-app">Mobile App</span>
-      <h1 class="text-display project-title">Happie</h1>
-      <p class="text-subtitle project-location">Meal Planning & Coordination App</p>
+      <h1 class="text-display project-title">Corvator</h1>
+      <p class="text-subtitle project-location">Chore Accountability for Student Houses</p>
     </div>
   </section>
-  
+
   <!-- Project Overview -->
   <section class="section project-overview">
     <div class="container">
@@ -84,13 +84,13 @@
         </div>
         <div class="project-content">
           <p class="text-body project-intro">
-            A mobile app I built to solve a daily problem in my student house. Happie helps groups coordinate meals by tracking who's eating, suggesting recipes through a swipe based voting system, and planning special dinners. Built from scratch with full backend infrastructure.
+            An iOS app that makes skipped chores visible and turns them into a fair queue of penalty duties. Corvator tracks who left the mess, converts repeat offences into penalty chores, and runs a weekly session that assigns them. Built with Expo, React Native and TypeScript on a local SQLite database, so it works without an account or a connection.
           </p>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Project Details -->
   <section class="section project-details-section">
     <div class="container">
@@ -100,16 +100,16 @@
         </div>
         <div class="project-content">
           <p class="text-body">
-            I live in a house with 16 guys in Delft. We cook together, but keeping track of who's eating dinner on any given night became a recurring issue. We'd buy too much or too little food, people wouldn't feel like eating what was made, and coordinating recipes that everyone liked was difficult.
+            I live in a house with 16 guys in Delft. The dishes are not really a cleaning problem, they are an accounting problem: nobody remembers who left the pan on the stove three weeks ago, so nothing ever follows from it. Without a record, the only enforcement mechanism is somebody nagging, and that cost always falls on the same person.
           </p>
           <p class="text-body" style="margin-top: 1rem;">
-            I wanted a simple way to fix this, so I built Happie.
+            A rota on the fridge does not fix it either. It says whose turn it is, but not what happens when the turn is skipped.
           </p>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Solution Section -->
   <section class="section project-solution-section">
     <div class="container">
@@ -119,16 +119,19 @@
         </div>
         <div class="project-content">
           <p class="text-body">
-            Happie lets users connect in groups and indicate whether they're eating with the group that day. For recipes, I implemented a system similar to Tinder: every day, users swipe through new recipes. The recipe with the most likes gets suggested to the group along with the full recipe instructions.
+            Corvator keeps a tally. Leave your mess and you get a mark. The first two are free, because everyone has a bad week; every mark after that becomes a penalty chore in a first-in-first-out queue. Each Sunday the app pulls four names off that queue and assigns the work. At the end of the month, remaining marks convert and the count resets.
           </p>
           <p class="text-body" style="margin-top: 1rem;">
-            The app also includes an events system for planning special dinners, so the group can coordinate bigger meals in advance.
+            The design choice that mattered was the free allowance. Punishing the first offence makes the app feel hostile and people stop opening it; forgiving two makes the third feel earned. Making the cost legible did what asking politely never did.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            Under the hood it is a local-first app: versioned SQL migrations, one repository per table, and no server to keep running. A house should not need an account to decide who does the dishes.
           </p>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Screenshots Carousel -->
   <section class="section project-screenshots-section">
     <div class="container">
@@ -141,25 +144,19 @@
             <div class="phone-carousel-wrapper">
               <div class="phone-carousel-track" id="carousel-track">
                 <div class="phone-slide">
-                  <img src="../pictures/c.jpg" alt="Happie App Screenshot">
+                  <img src="../pictures/corvator/corvator-1.jpg" alt="Corvator: the tally overview for the house">
                 </div>
                 <div class="phone-slide">
-                  <img src="../pictures/IMG_1189.PNG" alt="Happie App Screenshot">
+                  <img src="../pictures/corvator/corvator-2.jpg" alt="Corvator: giving someone a tally mark">
                 </div>
                 <div class="phone-slide">
-                  <img src="../pictures/IMG_1183.PNG" alt="Happie App Screenshot">
+                  <img src="../pictures/corvator/corvator-3.jpg" alt="Corvator: the penalty chore queue">
                 </div>
                 <div class="phone-slide">
-                  <img src="../pictures/IMG_1184.PNG" alt="Happie App Screenshot">
+                  <img src="../pictures/corvator/corvator-4.jpg" alt="Corvator: the Sunday session assigning four names">
                 </div>
                 <div class="phone-slide">
-                  <img src="../pictures/IMG_1188.PNG" alt="Happie App Screenshot">
-                </div>
-                <div class="phone-slide">
-                  <img src="../pictures/IMG_1187.PNG" alt="Happie App Screenshot">
-                </div>
-                <div class="phone-slide">
-                  <img src="../pictures/IMG_1186.PNG" alt="Happie App Screenshot">
+                  <img src="../pictures/corvator/corvator-5.jpg" alt="Corvator: task assignment between housemates">
                 </div>
               </div>
             </div>
@@ -181,36 +178,36 @@
       </div>
     </div>
   </section>
-  
+
   <!-- App Store CTA -->
   <section class="section project-cta-section">
     <div class="container">
       <div class="project-cta">
         <h3 class="text-title">Available on the App Store</h3>
-        <p class="text-body">Released in March 2026 and downloaded over 500 times.</p>
-        <a href="https://apps.apple.com/nl/app/happie/id6757129676" class="btn btn-primary" style="margin-top: 2rem;" target="_blank" rel="noopener">
+        <p class="text-body">Free, and it works offline.</p>
+        <a href="https://apps.apple.com/nl/app/corvator/id6759965966" class="btn btn-primary" style="margin-top: 2rem;" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
             <path d="M11.05 8.5c-.01-1.32.6-2.31 1.82-3.04-.68-.98-1.71-1.52-3.07-1.63-1.29-.1-2.7.75-3.21.75-.54 0-1.79-.72-2.77-.72C1.8 3.89 0 5.46 0 8.65c0 .94.17 1.91.52 2.91.46 1.32 2.13 4.55 3.87 4.5.91-.02 1.55-.65 2.73-.65 1.15 0 1.74.65 2.75.65 1.76-.03 3.27-2.96 3.71-4.28-2.36-1.11-2.53-3.24-2.53-3.28zM9.02 2.6c.98-1.16.89-2.22.86-2.6-.87.05-1.87.59-2.44 1.26-.63.72-1 1.61-.92 2.61.94.07 1.8-.41 2.5-1.27z"/>
           </svg>
-          Download Happie
+          Download Corvator
         </a>
       </div>
     </div>
   </section>
-  
+
   <!-- Next Project -->
   <section class="section next-project-section">
     <div class="container">
-      <a href="corvator.html" class="next-project-link">
+      <a href="community-incentive-program.html" class="next-project-link">
         <span class="text-micro">Next Project</span>
-        <span class="text-title">Corvator</span>
+        <span class="text-title">Community Incentive Program</span>
         <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
           <path d="M3 8.5H13M13 8.5L9 4.5M13 8.5L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
     </div>
   </section>
-  
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
@@ -224,10 +221,10 @@
       <p class="footer-copyright">© 2026 Willem Grasso. All rights reserved.</p>
     </div>
   </footer>
-  
+
   <!-- Scripts -->
   <script src="../js/main.js"></script>
-  
+
   <!-- Carousel Script -->
   <script>
     let currentSlide = 0;
@@ -236,7 +233,7 @@
     const totalSlides = slides.length;
     const maxSlide = totalSlides - 1; // Last valid slide index
     const dotsContainer = document.getElementById('carousel-dots');
-    
+
     // Get actual slide width from rendered element
     function getSlideWidth() {
       if (slides.length > 0) {
@@ -244,7 +241,7 @@
       }
       return window.innerWidth <= 768 ? 200 : 280;
     }
-    
+
     // Create dots
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement('button');
@@ -252,7 +249,7 @@
       dot.onclick = () => goToSlide(i);
       dotsContainer.appendChild(dot);
     }
-    
+
     function updateCarousel() {
       const slideWidth = getSlideWidth();
       track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
@@ -260,7 +257,7 @@
         dot.classList.toggle('active', i === currentSlide);
       });
     }
-    
+
     function moveCarousel(direction) {
       const newSlide = currentSlide + direction;
       // Prevent scrolling past first or last slide
@@ -268,13 +265,13 @@
       currentSlide = newSlide;
       updateCarousel();
     }
-    
+
     function goToSlide(index) {
       if (index < 0 || index > maxSlide) return;
       currentSlide = index;
       updateCarousel();
     }
-    
+
     // Update carousel on resize
     window.addEventListener('resize', updateCarousel);
   </script>
