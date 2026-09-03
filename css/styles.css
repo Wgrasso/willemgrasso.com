@@ -3,24 +3,48 @@
 
 /* ===== CSS VARIABLES ===== */
 :root {
-  --color-black: #000;
-  --color-dark: #111;
-  --color-gray-900: #1a1a1a;
-  --color-gray-800: #2a2a2a;
-  --color-gray-700: #3a3a3a;
-  --color-gray-600: #555;
-  --color-gray-500: #888;
-  --color-gray-400: #aaa;
-  --color-gray-300: #ccc;
-  --color-gray-200: #e5e5e5;
-  --color-gray-100: #f5f5f5;
-  --color-white: #fff;
-  
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
-  
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  
+  /* Neutrals carry a warm tint. A pure #fff / #888 stack reads as a lab report,
+     which is the wrong kind of clinical for a portfolio. */
+  --color-black: #14110f;
+  --color-dark: #1c1916;
+  --color-gray-900: #241f1b;
+  --color-gray-800: #322c27;
+  --color-gray-700: #4a423b;
+  --color-gray-600: #6b6158;
+  --color-gray-500: #8d8279;
+  --color-gray-400: #b0a79f;
+  --color-gray-300: #cdc5bd;
+  --color-gray-200: #e3ddd6;
+  --color-gray-100: #f2eeea;
+  --color-white: #fbf9f7;
+  --color-pure-white: #fff;
+
+  /* One accent, desaturated, used only where it means something:
+     links, the current page, and the research tag. */
+  --color-accent: #2f4858;
+  --color-accent-soft: #e8edf0;
+
+  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --font-primary: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Radii step down as elements nest: container, then card, then control. */
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --radius-xs: 5px;
+
+  /* Shadows are tinted with the warm neutral rather than pure black. */
+  --shadow-sm: 0 1px 2px rgba(36, 31, 27, 0.05);
+  --shadow-md: 0 4px 16px -4px rgba(36, 31, 27, 0.10), 0 1px 3px rgba(36, 31, 27, 0.05);
+  --shadow-lg: 0 18px 40px -12px rgba(36, 31, 27, 0.18), 0 2px 6px rgba(36, 31, 27, 0.06);
+
+  /* Built-in easings are too weak to read as intentional. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+
+  --transition-smooth: 300ms var(--ease-out);
+  --transition-fast: 160ms var(--ease-out);
+
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
@@ -28,6 +52,9 @@
   --spacing-xl: 3rem;
   --spacing-2xl: 5rem;
   --spacing-3xl: 8rem;
+
+  --z-nav: 1000;
+  --z-overlay: 1200;
 }
 
 /* ===== RESET & BASE ===== */
@@ -56,27 +83,36 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 1.1;
+  line-height: 1.15;
+  text-wrap: balance;
 }
 
 .text-hero {
+  font-family: var(--font-display);
   font-size: clamp(3rem, 15vw, 14rem);
-  font-weight: 600;
-  letter-spacing: -0.04em;
+  font-weight: 400;
+  letter-spacing: -0.03em;
   line-height: 0.9;
 }
 
 .text-display {
-  font-size: clamp(2.5rem, 8vw, 6rem);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 8vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
 }
 
 .text-title {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Body copy stays in the sans, and reads better slightly narrower. */
+.text-body {
+  text-wrap: pretty;
 }
 
 .text-subtitle {
@@ -466,28 +502,51 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-card {
-  background: var(--color-gray-100);
+  background: var(--color-pure-white);
   border: 1px solid var(--color-gray-200);
-  padding: var(--spacing-xl);
-  transition: var(--transition-smooth);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  padding-bottom: var(--spacing-lg);
   text-decoration: none;
   color: inherit;
-  display: block;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform 260ms var(--ease-out), box-shadow 260ms var(--ease-out),
+              border-color 260ms var(--ease-out);
 }
 
-.project-card:hover {
-  border-color: var(--color-gray-400);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-gray-300);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .project-card:hover .project-preview img {
+    transform: scale(1.03);
+  }
 }
 
+.project-card:active {
+  transform: translateY(-1px) scale(0.995);
+  transition-duration: 100ms;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* One aspect ratio for every preview, so no card floats while its neighbour
+   fills. Photographs bleed to the edge; marks and screenshots sit on a tinted
+   panel with real breathing room instead of white letterboxing. */
 .project-preview {
   width: 100%;
-  height: 200px;
-  background: var(--color-white);
-  border: 1px solid var(--color-gray-200);
-  margin-bottom: var(--spacing-lg);
+  aspect-ratio: 4 / 3;
+  background: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -498,10 +557,22 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 400ms var(--ease-out);
 }
 
 .project-preview img.preview-contain {
+  width: auto;
+  height: auto;
+  max-width: 72%;
+  max-height: 72%;
   object-fit: contain;
+}
+
+/* A dense figure (a forest plot, a signal trace) is unreadable shrunk into a
+   card, so show the top of it at full width rather than the whole thing tiny. */
+.project-preview img.preview-crop {
+  object-fit: cover;
+  object-position: top center;
 }
 
 .project-preview-placeholder {
@@ -2263,3 +2334,325 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+/* ===== DOCUMENT CARD AND PDF VIEWER ===== */
+
+/* A research paper deserves to look like one on the page, rather than being a
+   link you have to trust. The cover is a render of the real first page. */
+.doc-card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+  background: var(--color-pure-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.doc-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-gray-200);
+  background: var(--color-pure-white);
+  box-shadow: var(--shadow-md);
+}
+
+.doc-meta {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gray-500);
+  margin-bottom: 0.5rem;
+}
+
+.doc-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.doc-card p {
+  margin-top: 0.75rem;
+  color: var(--color-gray-700);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.doc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: var(--spacing-md);
+}
+
+@media (max-width: 640px) {
+  .doc-card {
+    grid-template-columns: 1fr;
+  }
+  .doc-cover {
+    max-width: 170px;
+  }
+}
+
+/* The overlay is one of the few places a modal is right: the document needs the
+   whole screen and protected focus. It stays hidden until opened, and the iframe
+   is only given a src at that moment so a 12 MB file never blocks the page. */
+.pdf-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  display: none;
+  padding: clamp(0.75rem, 3vw, 2rem);
+  background: rgba(20, 17, 15, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.pdf-overlay[open] {
+  display: grid;
+  place-items: center;
+  animation: overlayIn 180ms var(--ease-out);
+}
+
+.pdf-dialog {
+  position: relative;
+  width: min(1100px, 100%);
+  height: min(88vh, 100%);
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  animation: dialogIn 220ms var(--ease-out);
+}
+
+.pdf-dialog-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding: 0.875rem var(--spacing-md);
+  border-bottom: 1px solid var(--color-gray-200);
+  background: var(--color-pure-white);
+}
+
+.pdf-dialog-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.pdf-dialog-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pdf-frame {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  background: var(--color-gray-100);
+}
+
+.pdf-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-sm);
+  background: var(--color-pure-white);
+  color: var(--color-gray-700);
+  cursor: pointer;
+  transition: background 160ms var(--ease-out), color 160ms var(--ease-out),
+              transform 120ms var(--ease-out);
+}
+
+.pdf-close:hover {
+  background: var(--color-gray-100);
+  color: var(--color-black);
+}
+
+.pdf-close:active {
+  transform: scale(0.94);
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes dialogIn {
+  from { opacity: 0; transform: scale(0.97) translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pdf-overlay[open],
+  .pdf-dialog {
+    animation: none;
+  }
+}
+
+body.overlay-open {
+  overflow: hidden;
+}
+
+/* ===== REFINEMENTS ===== */
+
+/* Buttons: rounded, and they answer a press. The existing .btn-primary is white
+   on black for the dark CTA band; these two are for light surfaces. */
+.btn {
+  border-radius: var(--radius-sm);
+  transition: background 180ms var(--ease-out), color 180ms var(--ease-out),
+              border-color 180ms var(--ease-out), transform 120ms var(--ease-out);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.btn-dark {
+  background: var(--color-black);
+  color: var(--color-pure-white);
+  border: 1px solid var(--color-black);
+}
+
+.btn-dark:hover {
+  background: var(--color-gray-800);
+  border-color: var(--color-gray-800);
+}
+
+/* On a light surface the secondary button needs a readable border and text;
+   the original variant was drawn for the dark band only. */
+.doc-actions .btn-secondary,
+.pdf-dialog-actions .btn-secondary {
+  background: var(--color-pure-white);
+  color: var(--color-gray-800);
+  border: 1px solid var(--color-gray-300);
+}
+
+.doc-actions .btn-secondary:hover,
+.pdf-dialog-actions .btn-secondary:hover {
+  background: var(--color-gray-100);
+  color: var(--color-black);
+  border-color: var(--color-gray-400);
+}
+
+.pdf-dialog-actions .btn-secondary {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.6875rem;
+}
+
+/* Instrument Serif ships one weight; asking for 600 makes the browser fake it. */
+.hero-title-small {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Corners, softened but not uniform: containers rounder than the things inside. */
+.project-type {
+  border-radius: var(--radius-xs);
+}
+
+.project-figure img,
+.phone-slide img,
+.project-hero-img,
+.doc-cover {
+  border-radius: var(--radius-sm);
+}
+
+.next-project-link,
+.project-cta {
+  border-radius: var(--radius-lg);
+}
+
+.carousel-btn {
+  border-radius: 50%;
+}
+
+/* The accent earns its keep on links and the current page, nowhere else. */
+.project-content a:not(.btn),
+.footer-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-link.active {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+.project-type-research {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  box-shadow: none;
+}
+
+/* The scroll cue bounced on a keyframe loop. A single settle reads calmer and
+   stops competing with the page for attention. */
+.scroll-indicator svg {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* The card is a flex column, so an inline-block tag stretches to full width and
+   reads as a banner instead of a label. */
+.project-card .project-type {
+  align-self: flex-start;
+}
+
+/* Push the link to the bottom so it lands on one line across a row of cards
+   whose descriptions differ in length. */
+.project-card p {
+  flex: 1;
+}
+
+.project-card .project-link {
+  margin-top: var(--spacing-md);
+}
+
+/* ===== PORTFOLIO PAGE ===== */
+
+.portfolio-page {
+  padding-top: calc(var(--spacing-3xl) + 40px);
+}
+
+/* A centred intro at container width runs to about 150 characters per line.
+   Hold it to a readable measure. */
+.portfolio-page .section-header {
+  max-width: 620px;
+  margin: 0 auto var(--spacing-2xl);
+  text-align: center;
+}
+
+.portfolio-page .section-header .text-body {
+  color: var(--color-gray-600);
+  font-size: 1.0625rem;
+  margin-top: var(--spacing-md);
+}
+
+.portfolio-page .section-header h1 {
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+}
