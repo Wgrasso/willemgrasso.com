@@ -9,20 +9,20 @@
     gtag('js', new Date());
     gtag('config', 'G-PPT7CW82WE');
   </script>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Farm Orphanage | Willem Grasso</title>
-  <meta name="description" content="The Farm Orphanage. A family led project establishing an orphanage in Gordons Bay, South Africa.">
-  
+  <title>ICU Artifact Detection | Willem Grasso</title>
+  <meta name="description" content="Detecting artifacts in intensive care blood pressure monitoring, so that a nurse is not called to an emergency that is not happening.">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Styles -->
   <link rel="stylesheet" href="../css/styles.css">
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>W</text></svg>">
 </head>
@@ -32,13 +32,13 @@
     <div class="nav-brand">
       <a href="../index.html" class="nav-brand-text">Willem Grasso</a>
     </div>
-    
+
     <nav class="nav-links">
       <a href="../index.html#portfolio" class="nav-link active">Portfolio</a>
       <a href="../resume.html" class="nav-link">Resume</a>
       <a href="../about.html" class="nav-link">About Me</a>
     </nav>
-    
+
     <!-- Mobile Toggle -->
     <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Open menu">
       <span></span>
@@ -46,7 +46,7 @@
       <span></span>
     </button>
   </header>
-  
+
   <!-- Mobile Navigation -->
   <nav class="nav-mobile" id="nav-mobile">
     <button class="nav-mobile-toggle" id="nav-close" aria-label="Close menu" style="position: absolute; top: 2rem; right: 2rem;">
@@ -54,12 +54,12 @@
       <span style="opacity: 0;"></span>
       <span style="transform: rotate(-45deg) translateY(-5px);"></span>
     </button>
-    
+
     <a href="../index.html#portfolio" class="nav-link">Portfolio</a>
     <a href="../resume.html" class="nav-link">Resume</a>
     <a href="../about.html" class="nav-link">About Me</a>
   </nav>
-  
+
   <!-- Project Hero -->
   <section class="project-hero">
     <div class="container">
@@ -69,28 +69,12 @@
         </svg>
         Back to Portfolio
       </a>
-      <span class="text-micro project-type project-type-humanitarian">Humanitarian Project</span>
-      <h1 class="text-display project-title">The Farm: Orphanage</h1>
-      <p class="text-subtitle project-location">Gordons Bay, South Africa</p>
-      <a href="https://hetkleinerijk.com/" target="_blank" rel="noopener" style="margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; background-color: var(--color-gray-200); color: var(--color-gray-600); border-radius: 4px; font-size: 0.75rem; text-decoration: none; transition: all 0.2s ease;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-          <polyline points="15 3 21 3 21 9"></polyline>
-          <line x1="10" y1="14" x2="21" y2="3"></line>
-        </svg>
-        hetkleinerijk.com
-      </a>
+      <span class="text-micro project-type project-type-research">Research</span>
+      <h1 class="text-display project-title">ICU Artifact Detection</h1>
+      <p class="text-subtitle project-location">Telling Real Blood Pressure From Measurement Noise</p>
     </div>
   </section>
-  
-  <!-- Project Hero Image -->
-  <section class="project-hero-image">
-    <div class="container">
-      <img src="../pictures/c86a746e-b7d0-4881-ac4e-d44b050138e1.jpg" alt="The Farm Orphanage" class="project-hero-img">
-    </div>
-  </section>
-  
-  <!-- Project Overview -->
+
   <section class="section project-overview">
     <div class="container">
       <div class="project-grid">
@@ -99,75 +83,98 @@
         </div>
         <div class="project-content">
           <p class="text-body project-intro">
-            A family run orphanage in Gordons Bay, South Africa. My sister, brother, parents, and I started this after my sister met a mother named Bubbles during a trip to Africa. Bubbles was caring for 8 children and about to lose her home. We found a house, moved them in, and have been running it since.
+            Detecting artifacts in intensive care blood pressure monitoring. Built for the Intensive Care course in the Clinical Technology bachelor at TU Delft, as a group project.
           </p>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- Project Details -->
+
   <section class="section project-details-section">
     <div class="container">
       <div class="project-grid">
         <div class="project-sidebar">
-          <h2 class="text-micro section-label">What We Did</h2>
+          <h2 class="text-micro section-label">The Problem</h2>
         </div>
         <div class="project-content">
           <p class="text-body">
-            We found and secured housing for Bubbles and the children. Over time, we restructured from 12 mothers and 8 children to 3 mothers and 18 children.
+            An arterial line measures blood pressure continuously, and a bedside monitor alarms when that pressure leaves a safe range. The catch is that the line is a piece of physical equipment. Flushing it, an air bubble in the tubing, a transducer hanging at the wrong height, all of these move the number without anything happening to the patient.
           </p>
           <p class="text-body" style="margin-top: 1rem;">
-            We set up a kitchen for processing potatoes and started a vegetable garden to grow produce on site. We also started a sewing studio that makes clothing from scrap fabric collected locally.
-          </p>
-          <p class="text-body" style="margin-top: 1rem;">
-            My sister has a permanent on site presence. I help with funding, finding volunteers, coordinating people to go there, building the website, and supporting the various projects on site. My parents and brother contribute to planning and resources.
+            The result is an alarm that is not about the patient. That is not a minor annoyance in an intensive care unit: it costs attention, and repeated false alarms are exactly how staff learn to stop reacting to them.
           </p>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- Project Gallery -->
-  <section class="section project-gallery-section">
+
+  <section class="section project-solution-section">
     <div class="container">
       <div class="project-grid">
         <div class="project-sidebar">
-          <h2 class="text-micro section-label">Gallery</h2>
+          <h2 class="text-micro section-label">What It Looks Like</h2>
         </div>
         <div class="project-content">
-          <div class="project-gallery">
-            <div class="gallery-item">
-              <img src="../pictures/f1c5e4a0-d04f-4f2a-adce-ac5e63f2b867.png" alt="The Farm Orphanage" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-              <img src="../pictures/Afbeelding van WhatsApp op 2025-12-23 om 21.01.43_b9ce6865.jpg" alt="The Farm Orphanage" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-              <img src="../pictures/74a34ebd-df17-4c80-aadb-86e4eda586dc.png" alt="The Farm Orphanage" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-              <img src="../pictures/Afbeelding van WhatsApp op 2025-12-23 om 21.00.06_c922867a.jpg" alt="The Farm Orphanage" class="gallery-img">
-            </div>
-          </div>
+          <figure class="project-figure project-figure--wide">
+            <a href="../pictures/icu/waveforms.png" target="_blank" rel="noopener">
+              <img src="../pictures/icu/waveforms.png" alt="Two arterial pressure traces, one clean and one where a flush pins the signal near 195 mmHg">
+            </a>
+            <figcaption>Above, a clean arterial pressure trace. Below, a flush: the signal jumps to roughly 195 mmHg and stays there. Read as a measurement, that is a hypertensive emergency. It is a nurse rinsing a line.</figcaption>
+          </figure>
+          <p class="text-body">
+            Once you see the two next to each other, the shape of the problem is obvious. A flush does not look like blood pressure. It has no pulse in it, it arrives faster than any physiological change, and it holds a flat, noisy plateau. Every artifact type has a signature like this.
+          </p>
         </div>
       </div>
     </div>
   </section>
-  
+
+  <section class="section project-screenshots-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">The Approach</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body">
+            We built detection per artifact type rather than one general classifier: calibration, flush, air bubble, infusion on the central venous line, pendulum motion and transducer height each got their own module, built around the signature that distinguishes it.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            On top of that sits a decision tree classifier on features extracted from the signal. The reason for a decision tree rather than something more powerful is the same reason as in my other clinical work: a clinician can read why the algorithm decided something, and a black box that flags an alarm as false is not a tool anyone should trust at a bedside.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-cta-section">
+    <div class="container">
+      <div class="project-cta">
+        <h3 class="text-title">Open source</h3>
+        <p class="text-body">Detection modules per artifact type, plus the analysis notebooks.</p>
+        <a href="https://github.com/Wgrasso/ic-artifact-detection" class="btn btn-primary" style="margin-top: 2rem;" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8.5H13M13 8.5L9 4.5M13 8.5L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Next Project -->
   <section class="section next-project-section">
     <div class="container">
-      <a href="tdcs-post-stroke-fatigue.html" class="next-project-link">
+      <a href="community-incentive-program.html" class="next-project-link">
         <span class="text-micro">Next Project</span>
-        <span class="text-title">tDCS and Post Stroke Fatigue</span>
+        <span class="text-title">Community Incentive Program</span>
         <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
           <path d="M3 8.5H13M13 8.5L9 4.5M13 8.5L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
     </div>
   </section>
-  
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
@@ -178,12 +185,11 @@
         <a href="../about.html" class="footer-link">About Me</a>
         <a href="../websites.html" class="footer-link">Websites</a>
       </div>
-      <p class="footer-copyright">© 2026 Willem Grasso. All rights reserved.</p>
+      <p class="footer-copyright">&copy; 2026 Willem Grasso. All rights reserved.</p>
     </div>
   </footer>
-  
+
   <!-- Scripts -->
   <script src="../js/main.js"></script>
 </body>
 </html>
-

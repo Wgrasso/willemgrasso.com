@@ -529,6 +529,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-white);
 }
 
+.project-type-research {
+  background: var(--color-white);
+  color: var(--color-black);
+  box-shadow: inset 0 0 0 1px var(--color-black);
+}
+
 .project-type-website {
   background: var(--color-gray-700);
   color: var(--color-white);
@@ -829,6 +835,59 @@ h1, h2, h3, h4, h5, h6 {
 .project-hero .back-link {
   display: flex;
   width: fit-content;
+}
+
+/* A wide figure inside a project section: a forest plot, a signal trace, a chart.
+   Sits on the same white as the page so the figure itself carries the contrast. */
+.project-figure {
+  margin: 0;
+}
+
+.project-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-gray-200);
+}
+
+.project-figure figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-gray-500);
+}
+
+/* A phone screenshot is portrait: it should not stretch to the text measure. */
+.project-figure--portrait img {
+  max-width: 330px;
+  margin: 0 auto;
+}
+
+.project-figure a {
+  display: block;
+}
+
+/* Text is capped at 700px for readability, but a forest plot or a signal trace
+   is unreadable at that width. On wide screens the figure breaks out of the
+   text measure and uses the room the grid column already has. */
+@media (min-width: 1024px) {
+  .project-figure--wide {
+    width: calc(100% + 340px);
+    max-width: calc(100vw - 300px);
+  }
+}
+
+/* A secondary project presented inside another project's page. */
+.sub-project {
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.sub-project .sub-project-mark {
+  width: 56px;
+  height: auto;
+  margin-bottom: var(--spacing-sm);
 }
 
 .project-title {

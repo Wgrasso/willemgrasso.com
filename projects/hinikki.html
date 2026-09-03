@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPT7CW82WE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PPT7CW82WE');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HiNikki | Willem Grasso</title>
+  <meta name="description" content="HiNikki. A voice companion for older adults living with dementia, plus the family app that keeps its world true. On TestFlight.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>W</text></svg>">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="nav-header" id="nav-header">
+    <div class="nav-brand">
+      <a href="../index.html" class="nav-brand-text">Willem Grasso</a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="../index.html#portfolio" class="nav-link active">Portfolio</a>
+      <a href="../resume.html" class="nav-link">Resume</a>
+      <a href="../about.html" class="nav-link">About Me</a>
+    </nav>
+
+    <!-- Mobile Toggle -->
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="nav-mobile">
+    <button class="nav-mobile-toggle" id="nav-close" aria-label="Close menu" style="position: absolute; top: 2rem; right: 2rem;">
+      <span style="transform: rotate(45deg) translateY(5px);"></span>
+      <span style="opacity: 0;"></span>
+      <span style="transform: rotate(-45deg) translateY(-5px);"></span>
+    </button>
+
+    <a href="../index.html#portfolio" class="nav-link">Portfolio</a>
+    <a href="../resume.html" class="nav-link">Resume</a>
+    <a href="../about.html" class="nav-link">About Me</a>
+  </nav>
+
+  <!-- Project Hero -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#portfolio" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M13 8.5H3M3 8.5L7 4.5M3 8.5L7 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Portfolio
+      </a>
+      <span class="text-micro project-type project-type-app">Mobile App</span>
+      <h1 class="text-display project-title">HiNikki</h1>
+      <p class="text-subtitle project-location">A Voice Companion for Older Adults Living With Dementia</p>
+    </div>
+  </section>
+
+  <section class="section project-overview">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">Overview</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body project-intro">
+            A voice companion for older adults living with dementia, and a family app that keeps its world accurate. The older adult gets one large button to talk to Nikki. The family gets a dashboard: schedule, reminders, safe places, emergency contacts, and a review queue of everything Nikki believes it has learned. On TestFlight and in active development. I lead the project and the small team building it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-details-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">The Problem</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body">
+            Someone living with dementia asks the same questions many times a day. What day is it. Is my daughter coming. Did I take my pills. A voice assistant can answer all of those, but a generic one answers generically, and gets it wrong in exactly the ways that matter, because it has no idea who your daughter is or whether she is actually coming.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            Meanwhile the family carries the whole picture in their heads and in group chats, with no way to put it where it would help.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-solution-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">The Approach</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body">
+            Nikki's intelligence is deliberately not in our codebase. The conversation loop, meaning speech recognition, the language model, speech synthesis and turn taking, runs inside a specialist voice platform. What we build is the brain around it: everything that turns a generic voice model into this person's companion, and everything that turns a conversation into data a family can safely act on.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            Before a call starts, the app assembles what Nikki should know right now: the person's profile, who is in their life, today's schedule, the weather where they actually are, and recent conversation summaries.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-screenshots-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">Nothing the AI Says Becomes a Fact</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body">
+            This is the part I would defend in a design review. A language model talking with a confused person is a data integrity problem wearing a friendly voice. If Nikki mishears "my son visited" and that quietly enters the family record, the record is now worse than useless. It is confidently wrong, and nobody knows.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            So the boundary is drawn twice. Nothing in the transcript is ever stored as a fact; the agent has to call an explicit tool. And a session with the older adult cannot write to the family record at all, only propose. A family member reviews and approves. The elder cannot approve their own proposal and cannot forge an audit trail.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            That boundary is enforced in two independent layers, in the tool layer and in the database security policy, because either one alone is a single point of failure. The failure you are defending against is not a hacker. It is a hallucination plus a person who cannot reliably tell you it was wrong.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-details-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">Privacy</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body">
+            Voice transcripts, photos, schedules and precise location can constitute special category health data under the GDPR, regardless of how few users you have. A data protection impact assessment, a granular consent flow, a legal basis mapping per purpose and processor agreements are scoped and underway ahead of wider testing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-cta-section">
+    <div class="container">
+      <div class="project-cta">
+        <h3 class="text-title">How it is built</h3>
+        <p class="text-body">The architecture is public, including the decisions and the trade-offs. The source stays private.</p>
+        <a href="https://github.com/Wgrasso/hinikki-overview" class="btn btn-primary" style="margin-top: 2rem;" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8.5H13M13 8.5L9 4.5M13 8.5L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Read the architecture
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Project -->
+  <section class="section next-project-section">
+    <div class="container">
+      <a href="the-farm-orphanage.html" class="next-project-link">
+        <span class="text-micro">Next Project</span>
+        <span class="text-title">The Farm: Orphanage</span>
+        <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8.5H13M13 8.5L9 4.5M13 8.5L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../index.html#portfolio" class="footer-link">Portfolio</a>
+        <a href="../resume.html" class="footer-link">Resume</a>
+        <a href="../about.html" class="footer-link">About Me</a>
+        <a href="../websites.html" class="footer-link">Websites</a>
+      </div>
+      <p class="footer-copyright">&copy; 2026 Willem Grasso. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+</body>
+</html>

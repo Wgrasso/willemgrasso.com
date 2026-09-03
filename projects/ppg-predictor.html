@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPT7CW82WE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PPT7CW82WE');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPG Predictor | Willem Grasso</title>
+  <meta name="description" content="PPG Predictor. Bachelor research at Erasmus MC predicting the portal pressure gradient after TIPS from CT anatomy, with the app that makes the model usable.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>W</text></svg>">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="nav-header" id="nav-header">
+    <div class="nav-brand">
+      <a href="../index.html" class="nav-brand-text">Willem Grasso</a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="../index.html#portfolio" class="nav-link active">Portfolio</a>
+      <a href="../resume.html" class="nav-link">Resume</a>
+      <a href="../about.html" class="nav-link">About Me</a>
+    </nav>
+
+    <!-- Mobile Toggle -->
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile" id="nav-mobile">
+    <button class="nav-mobile-toggle" id="nav-close" aria-label="Close menu" style="position: absolute; top: 2rem; right: 2rem;">
+      <span style="transform: rotate(45deg) translateY(5px);"></span>
+      <span style="opacity: 0;"></span>
+      <span style="transform: rotate(-45deg) translateY(-5px);"></span>
+    </button>
+
+    <a href="../index.html#portfolio" class="nav-link">Portfolio</a>
+    <a href="../resume.html" class="nav-link">Resume</a>
+    <a href="../about.html" class="nav-link">About Me</a>
+  </nav>
+
+  <!-- Project Hero -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#portfolio" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M13 8.5H3M3 8.5L7 4.5M3 8.5L7 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Portfolio
+      </a>
+      <span class="text-micro project-type project-type-research">Research and App</span>
+      <h1 class="text-display project-title">PPG Predictor</h1>
+      <p class="text-subtitle project-location">Predicting Portal Pressure After a TIPS Procedure</p>
+    </div>
+  </section>
+
+  <section class="section project-overview">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">Overview</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body project-intro">
+            My bachelor research at Erasmus MC, and the app I built on top of it. The study asked whether the portal pressure gradient after a TIPS procedure can be predicted from anatomy that is already visible on a CT scan taken before the operation. The app puts that model in front of the medical team, with every coefficient visible and editable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-details-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">The Problem</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body">
+            In portal hypertension, usually caused by liver cirrhosis, the pressure gradient between the portal and hepatic veins rises. Above 10 mmHg it starts causing refractory ascites and variceal bleeding. When medication is not enough, a Transjugular Intrahepatic Portosystemic Shunt is the standard treatment. It works, but it carries a real risk of hepatic encephalopathy, so the question before the operation is how far the pressure will actually drop.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            Models that answer this properly simulate blood flow through the patient's own vascular geometry. They are accurate and they take hours per patient, which means they are not available in the room where the decision is made.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            The margin is narrow. Clinically significant portal hypertension starts at 10 mmHg and the target after the procedure sits around 12 mmHg, so the whole window between a stable patient and an acute one is about two millimetres of mercury. That is why we set the maximum acceptable error at 2 mmHg before we started.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-solution-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">The Study</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body">
+            A retrospective cohort at Erasmus MC of 453 patients, of which 144 met every inclusion criterion. Liver and spleen volumes were segmented automatically with TotalSegmentator in 3D Slicer, and vessel diameters were measured by hand following a standard protocol, with reproducibility checked between observers.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            We built two models side by side: an interpretable linear regression and a tree based XGBoost model. Both were validated with a five by five nested cross validation and compared against a dummy regressor that simply predicts the mean.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            The linear model reached a mean absolute error of 2.00 mmHg and met our threshold. But both models explained very little variance and sat close to the baseline. The conclusion was that static anatomical parameters are not sufficient to predict the pressure response after TIPS. What actually drives it, such as intrahepatic resistance, collateral circulation and vessel compliance, is not visible on a CT.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            That is a negative result, and it is the part of this project I would defend first. Measuring your model honestly against a baseline and then writing down that it lost is the difference between research and advertising.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-screenshots-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">The App</h2>
+        </div>
+        <div class="project-content">
+          <p class="text-body">
+            The model output only matters if the team can use it before the procedure. So instead of leaving it in a Python script, I built the prediction into an app: the inputs and the result on one screen, both models next to each other, and a clinical category for the predicted value.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            Two decisions made it useful. The linear equation is editable inside the app, so a team can enter its own coefficients without touching the code. And both models share the same input definitions, so they can be compared directly on one screen. There is no machine learning library running at all, just readable arithmetic, which means every number on screen can be traced back to a coefficient you can see.
+          </p>
+          <p class="text-body" style="margin-top: 1rem;">
+            It is a decision support tool. The interpretation and the decision stay with the clinician.
+          </p>
+          <figure class="project-figure project-figure--portrait">
+            <a href="../pictures/ppg/prediction.png" target="_blank" rel="noopener">
+              <img src="../pictures/ppg/prediction.png" alt="The app showing the linear and XGBoost predictions side by side with a clinical category">
+            </a>
+            <figcaption>Both models on one screen, with the clinical category and the number of variables entered. Values shown are synthetic.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-details-section">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-sidebar">
+          <h2 class="text-micro section-label">Transparency</h2>
+        </div>
+        <div class="project-content">
+          <figure class="project-figure project-figure--portrait">
+            <a href="../pictures/ppg/coefficients.png" target="_blank" rel="noopener">
+              <img src="../pictures/ppg/coefficients.png" alt="The linear model screen listing the intercept and every variable coefficient in editable fields">
+            </a>
+            <figcaption>Every coefficient from the study, visible and editable. No black box.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-cta-section">
+    <div class="container">
+      <div class="project-cta">
+        <h3 class="text-title">Open source, with the full study</h3>
+        <p class="text-body">The code, the models and the complete research report are public.</p>
+        <a href="https://github.com/Wgrasso/pvp-predictor" class="btn btn-primary" style="margin-top: 2rem;" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8.5H13M13 8.5L9 4.5M13 8.5L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Project -->
+  <section class="section next-project-section">
+    <div class="container">
+      <a href="hinikki.html" class="next-project-link">
+        <span class="text-micro">Next Project</span>
+        <span class="text-title">HiNikki</span>
+        <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8.5H13M13 8.5L9 4.5M13 8.5L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../index.html#portfolio" class="footer-link">Portfolio</a>
+        <a href="../resume.html" class="footer-link">Resume</a>
+        <a href="../about.html" class="footer-link">About Me</a>
+        <a href="../websites.html" class="footer-link">Websites</a>
+      </div>
+      <p class="footer-copyright">&copy; 2026 Willem Grasso. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+</body>
+</html>
